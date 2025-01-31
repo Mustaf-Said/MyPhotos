@@ -13,6 +13,14 @@ body {
   /* height: auto; */
   min-width: 380px;
   font-family: "Playfair Display", serif;
+  background-image: linear-gradient(
+    to right,
+    #434343,
+    #908f8f,
+    #908f8f,
+    #908f8f,
+    #434343
+  );
 }
 
 header {
@@ -21,9 +29,12 @@ header {
   flex-wrap: wrap;
   align-items: center;
   grid-area: header;
+  position: sticky;
+  top: 0;
   padding: 1em;
-  height: 20vh;
-  background: #606060;
+  height: 22vh;
+  background: #434343;
+  opacity: 80%;
   h1 {
     a {
       color: #fff;
@@ -136,31 +147,34 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     height: auto;
-    width: 80%;
+    width: 90%;
     margin: 1em auto;
-    /*  border-radius: 11px;
-    box-shadow: -3px -3px 7px 7px #515151; */
+    hr {
+      border: 2px dotted #cecccc;
+      width: 100%;
+      margin: auto;
+      border-radius: 1em;
+      margin-bottom: 1em;
+    }
     section {
-      border-radius: 11px;
-      box-shadow: -3px -3px 7px 7px #515151;
       padding: 2em;
-      h3 {
-        padding: 1em;
-      }
+      width: 45%;
       ul {
         list-style: none;
       }
       li {
         line-height: 1.7em;
+        text-align: left;
+        word-break: break-all;
       }
     }
   }
   footer {
     grid-area: footer;
     padding: 1em;
-    background: #606060;
-    height: 20vh;
-    margin-top: 1.5rem;
+    background: #434343;
+    height: 24vh;
+    margin-top: 2.5rem;
   }
 }
 
@@ -180,6 +194,7 @@ aside {
       border-radius: 11px;
       position: relative;
       box-shadow: -3px -3px 7px 7px #515151;
+      z-index: -1;
     }
     button {
       position: absolute;
