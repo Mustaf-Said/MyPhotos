@@ -3,11 +3,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 body {
   text-align: center;
+  box-sizing: border-box;
   color: #fff;
   background: #908f8f;
   /* height: auto; */
@@ -104,7 +105,7 @@ header {
       flex-direction: row;
       flex-wrap: wrap;
       width: 100%;
-      /*    height: 40vh; */
+      margin-top: 1.5rem;
 
       li {
         list-style: none;
@@ -148,7 +149,7 @@ header {
     flex-wrap: wrap;
     height: auto;
     width: 90%;
-    margin: 1em auto;
+    /*  margin: 1em auto; */
     hr {
       border: 2px dotted #cecccc;
       width: 100%;
@@ -174,7 +175,7 @@ header {
     padding: 1em;
     background: #434343;
     height: 24vh;
-    margin-top: 2.5rem;
+    /* margin-top: 2.5rem; */
   }
 }
 
@@ -287,8 +288,7 @@ aside {
   body {
     min-width: 400px;
   }
-  main section,
-  footer {
+  main section, footer {
     display: none;
   }
 }
