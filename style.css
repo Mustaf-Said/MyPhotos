@@ -81,6 +81,7 @@ header {
     h2 {
       margin: 1em 0;
     }
+
     input {
       padding: 1em 7.5em;
       border-radius: 13px 0 13px 0;
@@ -170,16 +171,61 @@ header {
       }
     }
   }
-  footer {
-    grid-area: footer;
-    padding: 1em;
-    background: #434343;
-    height: 24vh;
-    /* margin-top: 2.5rem; */
+}
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1em;
+  color: #747373;
+  background: #434343;
+  height: auto;
+  p:hover {
+    color: #fff;
+  }
+  a {
+    color: #747373;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #fff;
+  }
+  #first {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 25%;
+  }
+  #second {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+    i {
+      font-size: 1.5em;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+  }
+  #thered {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+    p {
+      word-break: break-all;
+    }
   }
 }
-
 aside {
+  position: absolute;
   div {
     display: inline-block;
     justify-content: center;
@@ -187,15 +233,14 @@ aside {
     flex-direction: column;
     flex-wrap: wrap;
     padding: 1em;
-
+    cursor: pointer;
     img {
       width: 300px;
       height: 300px;
-      cursor: pointer;
       border-radius: 11px;
       position: relative;
       box-shadow: -3px -3px 7px 7px #515151;
-      z-index: -1;
+      /*  z-index: -1; */
     }
     button {
       position: absolute;
@@ -205,6 +250,7 @@ aside {
       font-weight: 600;
       font-size: 1.2rem;
       color: #252525;
+      /*  z-index: -1; */
     }
     button:hover {
       background: rgb(223, 123, 123);
@@ -265,6 +311,7 @@ aside {
   color: black;
   background-color: #fff;
   padding: 0 9px;
+  border-radius: 7px;
 }
 .right {
   position: absolute;
@@ -276,6 +323,12 @@ aside {
   color: black;
   background-color: #fff;
   padding: 0 9px;
+  border-radius: 7px;
+}
+.right:hover,
+.left:hover {
+  background: #888787;
+  color: #fff;
 }
 
 @media screen and (max-width: 512px) {
@@ -288,7 +341,8 @@ aside {
   body {
     min-width: 400px;
   }
-  main section, footer {
+  main section,
+  footer {
     display: none;
   }
 }

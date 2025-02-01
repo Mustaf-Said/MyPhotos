@@ -32,7 +32,7 @@ const renderLightbox = (photos, index) => {
 
   const img = document.createElement("img");
   const left = document.createElement("span");
-  const description = document.createElement("p");
+  const description = document.createElement("span");
   const created_at = document.createElement("p");
   const right = document.createElement("span");
 
@@ -87,13 +87,12 @@ function renderPhotos(getPhotos) {
         favoriteList.push(photo);
         localStorage.setItem("favorites", JSON.stringify(favoriteList));
         /* photoList.removeChild(li); */
-      /*   saveButton.classList.add("done"); */
       } else {
         alert("This photo is already in your favorites");
       }
     });
     // Lightbox
-    /* li.addEventListener("click", () => renderLightbox(getPhotos, index)); */
+    /*   li.addEventListener("click", () => renderLightbox(getPhotos, index)); */
   });
 }
 favoriteListPhoto.addEventListener("click", () => {
@@ -115,7 +114,9 @@ favoriteListPhoto.addEventListener("click", () => {
       divPhotoList.append(img, deleteButton);
       myPhotos.appendChild(divPhotoList);
 
-      img.addEventListener("click", () => renderLightbox(favoriteList, index));
+      img.addEventListener("click", () => {
+        renderLightbox(favoriteList, index);
+      });
 
       deleteButton.addEventListener("click", () => {
         favoriteList.splice(index, 1);
