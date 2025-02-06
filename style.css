@@ -101,6 +101,7 @@ header button:hover {
     border-radius: 13px 0 13px 0;
     border-style: none;
     background: #fff;
+    color: rgb(0, 0, 0);
   }
 
   nav button:hover {
